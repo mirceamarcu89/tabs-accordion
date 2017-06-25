@@ -1,0 +1,70 @@
+body {
+    padding: 0;
+    margin: 0;
+    font-family: Arial;
+}
+
+.accordion-tabs {
+    position: relative;
+    padding-top: 41px
+}
+
+.accordion-tabs .panel{
+    margin: 5px 0 0 0;
+    background: none;
+    border: 0;
+    border-radius: 0 0 0 0;
+    box-shadow: 0 0 0 #fff;
+}
+
+.accordion-tabs .panel .panel-heading {
+    padding: 0;
+    position: absolute;
+    top: 0;
+    width: 25%
+    
+}
+
+/* change here depending on the number of elements e.g. if 5 elements then increase by 20% (0, 20%, 40%, 60%, 80%) */
+.accordion-tabs .panel:nth-child(1) .panel-heading{
+    left: 0;
+}
+.accordion-tabs .panel:nth-child(2) .panel-heading{
+    left: 25%;
+}
+.accordion-tabs .panel:nth-child(3) .panel-heading{
+    left: 50%;
+}
+.accordion-tabs .panel:nth-child(4) .panel-heading{
+    left: 75%;
+}
+
+.accordion-tabs .panel-heading a{
+    display: block;
+    padding: 12px 24px;
+    background: #ccc;
+    text-align: center;
+    text-decoration: none;
+}
+
+.accordion-tabs .panel-heading a.collapsed {
+    background: #f5f5f5;
+}
+
+.accordion-tabs .panel-heading a.collapsed:hover {
+    background: #e8e8e8;
+}
+
+@media (max-width: 992px) {
+    .accordion-tabs {
+        padding-top: 0;
+        position: relative;
+    }
+
+    .accordion-tabs .panel.panel .panel-heading{
+        width: 100%;
+        position: relative;
+        left: 0;
+        top: 0;
+    }
+}
